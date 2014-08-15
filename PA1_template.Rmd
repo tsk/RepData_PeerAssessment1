@@ -41,7 +41,7 @@ dpattern[which.max(dpattern$avg.steps),]
 ```{r}
 missingvals <- is.na(activity$steps)
 ```
-The total missing values in the activity data set is `r sum(missingvals)`
+The total missing values in the activity data set is `r sum(missingvals)`. The strategy used is replacing the missing values by the average value for that interval.
 
 ```{r}
 fillvals <- function(steps,interval) {
