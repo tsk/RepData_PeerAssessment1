@@ -121,7 +121,7 @@ Mean and median are higher. If we compare with the previous histogram, we notice
 
 
 ```r
-plot(p2, col = rgb(0, 0, 1, 1/4))
+plot(p2, col = rgb(0, 0, 1, 1/4), xlab = "Steps per day", ylab = "Count", main = "Total number of steps taken per day")
 plot(p1, col = rgb(1, 0, 0, 1/4), add = TRUE)
 ```
 
