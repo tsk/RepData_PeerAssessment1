@@ -56,8 +56,8 @@ summary(steps$steps)
 library(ggplot2)
 dpattern <- aggregate(steps ~ interval, data = activity, mean, na.rm = TRUE)
 colnames(dpattern) <- c("interval", "avg.steps")
-qplot(x = dpattern$interval, y = dpattern$avg.steps, geom = c("line"), xlab = "Average number of steps", 
-    ylab = "5 minute interval", main = "Average daily pattern")
+qplot(x = dpattern$interval, y = dpattern$avg.steps, geom = c("line"), ylab = "Average number of steps", 
+    xlab = "5 minute interval", main = "Average daily pattern")
 ```
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
@@ -79,7 +79,7 @@ dpattern[which.max(dpattern$avg.steps), ]
 missingvals <- is.na(activity$steps)
 ```
 
-The total missing values in the activity data set is 2304
+The total missing values in the activity data set is 2304. The strategy used is replacing the missing values by the average value for that interval.
 
 
 ```r

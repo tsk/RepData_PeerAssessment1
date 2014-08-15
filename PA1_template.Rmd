@@ -30,7 +30,7 @@ library(ggplot2)
 dpattern <- aggregate(steps ~ interval, data=activity,mean, na.rm=TRUE)
 colnames(dpattern) <- c("interval","avg.steps")
 qplot(x=dpattern$interval,y=dpattern$avg.steps,geom=c("line"),
-      xlab="Average number of steps",ylab="5 minute interval",
+      ylab="Average number of steps",xlab="5 minute interval",
       main="Average daily pattern")
 ```
 ```{r}
